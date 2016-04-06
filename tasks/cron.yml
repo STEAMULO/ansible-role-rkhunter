@@ -1,0 +1,5 @@
+- name: Create cron script for rkhunter
+  template: src=rkhunter-cron.sh.j2 dest=/usr/local/bin/rkhunter-cron.sh owner=root group=root mode=0644
+
+- name: Add cronjob for rkhunter
+  cron: name="Execute RKHunter" special_time={{rkhunter_cron_frequency}} job="/usr/local/bin/rkhunter-cron.sh" user="root"
