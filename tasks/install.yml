@@ -10,7 +10,7 @@
     copy: no
 
 - name: Run installer
-  sudo: yes
+  become: yes
   command: ./installer.sh --layout /usr --install
     chdir=/tmp/rkhunter-{{rkhunter_version}}
   changed_when: false
@@ -19,7 +19,7 @@
 
 - name: Run apt-get upgrade
   apt: upgrade=full
-  sudo: yes
+  become: yes
   when: rkhunter_update_apt|bool
 
 - name: Install utilities needed for full rkhunter functionality
@@ -34,7 +34,7 @@
 
 - name: Update rkhunter data files
   command: rkhunter --update
-  sudo: yes
+  become: yes
   when: rkhunter_update|bool
   register: rkupdate
   failed_when: rkupdate.stdout.find('Update failed') != -1

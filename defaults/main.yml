@@ -19,7 +19,9 @@ rkhunter_run_checks: yes
 ##############################
 
 # Email to receive notifications
-rkhunter_mail_on_warnings: "dorny@steamulo.com"
+rkhunter_mail_on_warnings: "hebergement@steamulo.com"
+
+rkhunter_mail_script_path: "/usr/local/bin"
 
 # Assertion checks this value agains the value in your sshd configuration file
 rkhunter_allow_root_login: "without-password"
