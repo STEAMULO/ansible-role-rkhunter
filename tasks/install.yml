@@ -6,7 +6,7 @@
 - name: Download and extract rkhunter
   unarchive: 
     src: http://downloads.sourceforge.net/project/rkhunter/rkhunter/{{rkhunter_version}}/rkhunter-{{rkhunter_version}}.tar.gz
-    dest: /tmp/rkhunter-{{rkhunter_version}}
+    dest: /tmp
     copy: no
 
 - name: Run installer
