@@ -1,2 +1,3 @@
----
-# handlers file for rkhunter
+- name: rkhunter_update_base_files
+  command: rkhunter --propupd
+  become: yes
