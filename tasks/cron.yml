@@ -1,7 +1,7 @@
 - name: Create cron script for rkhunter
-  template: src=rkhunter-cron.sh.j2 dest={{rkhunter_mail_script_path}}/rkhunter-cron.sh owner=root group=root mode=0744
+  template: src=rkhunter-cron.sh.j2 dest={{rkhunter_cron_script_path}}/rkhunter-cron.sh owner=root group=root mode=0744
   become: yes
 
 - name: Add cronjob for rkhunter
-  cron: name="Execute RKHunter" special_time={{rkhunter_cron_frequency}} job="{{rkhunter_mail_script_path}}/rkhunter-cron.sh" user="root"
+  cron: name="Execute RKHunter" special_time={{rkhunter_cron_frequency}} job="{{rkhunter_cron_script_path}}/rkhunter-cron.sh" user="root"
   become: yes

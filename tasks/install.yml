@@ -18,9 +18,7 @@
 # Install utilities needed for full functionality
 
 - name: Run apt-get update
-  apt: 
-    update_cache:yes 
-    cache_valid_time:3600
+  apt: update_cache=yes cache_valid_time=3600
   become: yes
   when: rkhunter_update_apt|bool
 
