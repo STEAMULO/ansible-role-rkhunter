@@ -11,5 +11,5 @@
   become: yes
 
 - name: Add cronjob for rkhunter update check
-  cron: name="Execute RKHunter" special_time={{rkhunter_cron_frequency}} job="{{rkhunter_cron_script_path}}/rkhunter-update-checker-cron.sh" user="root"
+  cron: name="Execute RKHunter update checker" special_time={{rkhunter_cron_frequency}} job="{{rkhunter_cron_script_path}}/rkhunter-update-checker-cron.sh" user="root"
   become: yes
