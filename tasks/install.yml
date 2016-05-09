@@ -1,3 +1,4 @@
+---
 # Source: https://www.digitalocean.com/community/articles/how-to-use-rkhunter-to-guard-against-rootkits-on-an-ubuntu-vps
 
 # It is important to have the latest version of rkhunter installed because critical

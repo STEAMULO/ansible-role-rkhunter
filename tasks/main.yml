@@ -1,3 +1,5 @@
+---
+
 - include: install.yml
 
 - name: Update rkhunter configuration
