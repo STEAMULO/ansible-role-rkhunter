@@ -38,15 +38,16 @@ All other variables are documented in `rkhunter/defaults/main.yml`.
 
 
 ## Updating baseline file properties
-When software changes are made on the target machine, rkhunter may report differences in its next run. Two options are available to update rkhunter to the new file properties.
+When software changes are made on the target machine (upgrade or install of components), rkhunter may report differences in its next run. Two options are available to update rkhunter to the new file properties.
 
+:warning: **This should only be run when config files are known to be good**
 ### With an ad-hoc command
 
 ```
 ansible GROUPNAME -i INVENTORY_FILE -a "rkhunter --propupd" --sudo --ask-sudo-pass
 ```
-### By using a handler in your playbook
-```
+### By using a handler in your task or playbook
+```yaml
     - notify
         - rkhunter_update_base_files
 ```
