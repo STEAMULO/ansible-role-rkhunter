@@ -59,6 +59,7 @@ rkhunter_disable_tests:
   - deleted_files
   - packet_cap_apps
 
+# The openssl version of the Ubuntu repos is not the last openssl version
 rkhunter_app_whitelist:
   - "openssl:1.0.1f"
 
