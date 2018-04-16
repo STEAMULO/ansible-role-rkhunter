@@ -51,3 +51,7 @@ ansible GROUPNAME -i INVENTORY_FILE -a "rkhunter --propupd" --sudo --ask-sudo-pa
     - notify
         - rkhunter_update_base_files
 ```
+
+## Author Information
+
+Steamulo - www.steamulo.com
